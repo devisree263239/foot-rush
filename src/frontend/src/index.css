@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 5 0 0;
+    --foreground: 95 0.01 260;
+    --card: 10 0 0;
+    --card-foreground: 95 0.01 260;
+    --popover: 10 0 0;
+    --popover-foreground: 95 0.01 260;
+    --primary: 65 0.28 260;
+    --primary-foreground: 100 0 0;
+    --secondary: 12 0 0;
+    --secondary-foreground: 90 0.01 260;
+    --muted: 12 0 0;
+    --muted-foreground: 60 0.05 260;
+    --accent: 65 0.28 260;
+    --accent-foreground: 100 0 0;
+    --destructive: 55 0.22 25;
+    --destructive-foreground: 100 0 0;
+    --success: 65 0.28 260;
+    --border: 18 0.02 260;
+    --input: 12 0 0;
+    --ring: 65 0.28 260;
+    --radius: 0.5rem;
+    --hero-from: 5 0 0;
+    --hero-to: 10 0 0;
+    --footer-bg: 3 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: oklch(5% 0 0);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, oklch(5% 0 0), oklch(10% 0.02 260));
+  }
+
+  .footer-bg {
+    background-color: oklch(3% 0 0);
+  }
+
+  .circuit-pattern {
+    background-image: linear-gradient(
+        oklch(65% 0.28 260 / 0.05) 1px,
+        transparent 1px
+      ), linear-gradient(90deg, oklch(65% 0.28 260 / 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .puzzle-pattern {
+    background-image: radial-gradient(
+      circle at 2px 2px,
+      oklch(65% 0.28 260 / 0.08) 1px,
+      transparent 0
+    );
+    background-size: 24px 24px;
+  }
+}
